@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Document</title>
+        <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #menu_control{
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        .header{
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .logo{
+            width: 60px;
+            height: 40px;
+            margin-left: 10px;
+        }
+        .logo img{
+            display: block;
+        }
+        .menu_btn{
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .menu_btn span{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        .menu_btn::before{
+            content: " ";
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa,
+                        0px -8px 0px #aaa;
+        }
+        nav{
+            width: 80%;
+            height: calc(100vh - 50px);
+            background-color: #282923;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+        nav a{
+            display: block;
+            text-decoration: none;
+            color: #a6e22c;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22c;
+        }
+        #menu_control:checked ~ .header nav{
+            left: 0;
+        }
+        @media screen and (min-width:768px){
+            .menu_btn{
+                display: none;
+            }
+            .header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #282923;
+                align-items: center;
+            }
+            nav{
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a{
+                border-bottom: none;
+            }
+        }
+        img{
+                vertical-align: bottom;
+            }
+            .banner img{
+                width: 100%;
+            }
+            .footer{
+                background-color: #333;
+                color: #aaa;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .item-group{
+                width: 100%;
+                max-width: 1400px;
+                margin: auto;
+            }
+            .title{
+                margin: 0 0 20px;
+                padding: 30px 10px;
+                background-color: #ccc;
+            }
+            .title h2{
+                text-align: center;
+                font-size: 46px;
+            }
+            .title p{
+                text-align: center;
+                font-size: 22px;
+            }
+            .item{
+                margin: 0 10px;
+            }
+            .item .text h3{
+                font-size: 24px;
+                text-align: center;
+            }
+            .item .text p{
+                margin-bottom: 40px;
+            }
+            .item .pic img{
+                width: 100%;
+            }
+            .service{
+                margin: 60px 0;
+                background-color: antiquewhite;
+            }
+            @media screen and (min-width: 768px) {
+                .item-group{
+                    display: flex;
+                }
+                .service .item{
+                    display: flex;
+                }
+                .service .item .pic,
+                .service .item .text{
+                    width: 50%;
+                    margin: 0;
+                }
+                .service .item .text{
+                    display: flex;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" name="" id="menu_control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="#"><img style="width: 60px; height: 40px;" src="gura.jpeg">
+                </a>
+            </h1>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+            <nav>
+                <a href="#">link</a>
+                <a href="#">link</a>
+                <a href="#">link</a>
+                <a href="#">link</a>
+                <a href="#">link</a>
+                <a href="#">link</a>
+            </nav>
+        </div>
+        <div class="banner">
+            <img src="gura.jpeg">       
+         </div>
+
+         <div class="about">
+             <div class="wrap">
+                 <div class="title">
+                     <h2>關於我們</h2>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dicta adipisci soluta veritatis autem possimus dolore ab eligendi iste id!</p>
+                 </div>
+                <div class="item-group">
+                    <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, veniam tempora provident laudantium cum, eum laboriosam temporibus mollitia facere vero quasi voluptas repudiandae maxime inventore aperiam odio rem. Totam nulla maiores at, odio dolores impedit ullam labore tempora aliquid hic soluta maxime suscipit officiis ipsa deserunt itaque qui. Quae a labore repellat, temporibus cumque molestiae error iure consectetur hic vitae.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, nam molestiae ipsa facere eum alias eaque officia veritatis laudantium commodi excepturi soluta doloremque cumque, labore eligendi quibusdam error veniam enim atque et voluptates neque illo. Veritatis, dignissimos blanditiis sequi tenetur qui maiores quae a suscipit maxime praesentium id illo nisi adipisci reprehenderit explicabo nemo veniam quod amet! Ad, magnam quo.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita non repellat earum, dignissimos placeat odit alias vel eligendi cupiditate quaerat, aliquid ex id! Omnis accusamus laudantium vero a doloremque? Perspiciatis a id fugit amet expedita sapiente culpa eos voluptates voluptatibus neque! Voluptate iusto repellendus sed, libero quisquam ducimus harum. Voluptatem quod mollitia ipsa rerum, nostrum dolorem architecto consequuntur cumque autem.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+
+         <div class="service">
+             <div class="wrap">
+                 <div class="item-group">
+                    <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita non repellat earum, dignissimos placeat odit alias vel eligendi cupiditate quaerat, aliquid ex id! Omnis accusamus laudantium vero a doloremque? Perspiciatis a id fugit amet expedita sapiente culpa eos voluptates voluptatibus neque! Voluptate iusto repellendus sed, libero quisquam ducimus harum. Voluptatem quod mollitia ipsa rerum, nostrum dolorem architecto consequuntur cumque autem.</p>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="about">
+            <div class="wrap">
+                <div class="title">
+                    <h2>關於我們</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dicta adipisci soluta veritatis autem possimus dolore ab eligendi iste id!</p>
+                </div>
+               <div class="item-group">
+                   <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                       <div class="text">
+                           <h3>title</h3>
+                           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, veniam tempora provident laudantium cum, eum laboriosam temporibus mollitia facere vero quasi voluptas repudiandae maxime inventore aperiam odio rem. Totam nulla maiores at, odio dolores impedit ullam labore tempora aliquid hic soluta maxime suscipit officiis ipsa deserunt itaque qui. Quae a labore repellat, temporibus cumque molestiae error iure consectetur hic vitae.</p>
+                       </div>
+                   </div>
+                   <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                       <div class="text">
+                           <h3>title</h3>
+                           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, nam molestiae ipsa facere eum alias eaque officia veritatis laudantium commodi excepturi soluta doloremque cumque, labore eligendi quibusdam error veniam enim atque et voluptates neque illo. Veritatis, dignissimos blanditiis sequi tenetur qui maiores quae a suscipit maxime praesentium id illo nisi adipisci reprehenderit explicabo nemo veniam quod amet! Ad, magnam quo.</p>
+                       </div>
+                   </div>
+                   <div class="item">
+                        <div class="pic">
+                            <img src="guraface.jpg">
+                        </div>
+                       <div class="text">
+                           <h3>title</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita non repellat earum, dignissimos placeat odit alias vel eligendi cupiditate quaerat, aliquid ex id! Omnis accusamus laudantium vero a doloremque? Perspiciatis a id fugit amet expedita sapiente culpa eos voluptates voluptatibus neque! Voluptate iusto repellendus sed, libero quisquam ducimus harum. Voluptatem quod mollitia ipsa rerum, nostrum dolorem architecto consequuntur cumque autem.</p>
+                       </div>
+                   </div>
+                   <div class="item">
+                    <div class="pic">
+                        <img src="guraface.jpg">
+                    </div>
+                   <div class="text">
+                       <h3>title</h3>
+                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita non repellat earum, dignissimos placeat odit alias vel eligendi cupiditate quaerat, aliquid ex id! Omnis accusamus laudantium vero a doloremque? Perspiciatis a id fugit amet expedita sapiente culpa eos voluptates voluptatibus neque! Voluptate iusto repellendus sed, libero quisquam ducimus harum. Voluptatem quod mollitia ipsa rerum, nostrum dolorem architecto consequuntur cumque autem.</p>
+                   </div>
+               </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; copyright 2021 by frank
+        </div>
+    </body>
+</html>
